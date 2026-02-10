@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>縄文の生活：教科書×VRワールド 照合ワークシート</title>
+  <style>
+    /* ===== Print-friendly worksheet (A4) ===== */
+    :root{
+      --ink:#111;
+      --muted:#555;
+      --rule:#222;
+      --grid:#999;
+      --soft:#e6e6e6;
+      --pad:10px;
+      --radius:10px;
+      --font: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+    }
+
+    html,body{height:100%;}
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family:var(--font);
+      background:#f5f5f5;
+      line-height:1.35;
+    }
+
+    .page{
+      width: 210mm;
+      min-height: 297mm;
+      margin: 10mm auto;
+      background:#fff;
+      padding: 12mm 12mm 14mm;
+      box-shadow: 0 6px 24px rgba(0,0,0,.08);
+      box-sizing:border-box;
+    }
+
+    h1{
+      margin:0 0 4mm;
+      font-size: 18px;
+      letter-spacing:.02em;
+    }
+
+    .sub{
+      font-size: 12px;
+      color:var(--muted);
+      margin-bottom: 4mm;
+    }
+
+    .meta{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1.2fr;
+      gap: 6mm;
+      margin-bottom: 5mm;
+      font-size: 12px;
+    }
+    .meta .field{display:flex; gap:6px; align-items:flex-end;}
+    .label{white-space:nowrap; color:var(--muted);}
+    .line{
+      flex:1;
+      border-bottom: 1.2px solid var(--rule);
+      height: 1.2em;
+    }
+
+    .box{
+      border: 1.4px solid var(--rule);
+      border-radius: var(--radius);
+      padding: var(--pad);
+      margin: 5mm 0;
+    }
+
+    .box-title{
+      font-weight:700;
+      font-size: 13px;
+      margin: 0 0 6px;
+    }
+
+    .note{
+      font-size: 12px;
+      color:var(--muted);
+      margin: 6px 0 0;
+    }
+
+    .rules{
+      display:grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 10px;
+      font-size: 12px;
+    }
+    .pill{
+      display:inline-block;
+      border:1px solid var(--rule);
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin-right: 6px;
+      font-weight:700;
+      font-size: 11px;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .prompt{
+      font-size: 12px;
+      color:var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .write-lines{
+      border:1px solid var(--grid);
+      border-radius: 8px;
+      overflow:hidden;
+      background: repeating-linear-gradient(
+        to bottom,
+        #fff 0,
+        #fff 23px,
+        var(--soft) 24px
+      );
+      height: 96px;
+    }
+
+    .write-lines.tall{height: 140px;}
+    .write-lines.short{height: 72px;}
+
+    table{
+      width:100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 11px;
+    }
+    th,td{
+      border: 1px solid var(--grid);
+      padding: 6px 6px;
+      vertical-align: top;
+      word-break: break-word;
+    }
+    th{
+      background:#fafafa;
+      font-weight:700;
+      text-align:left;
+    }
+
+    .w-14{width:14%;}
+    .w-18{width:18%;}
+    .w-10{width:10%;}
+    .w-24{width:24%;}
+    .w-34{width:34%;}
+
+    .checkboxes{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 6px 0 0;
+      font-size: 12px;
+    }
+    .cb{display:flex; gap:6px; align-items:center;}
+    .square{width:12px; height:12px; border:1.2px solid var(--rule); display:inline-block;}
+
+    .footer{
+      display:flex;
+      justify-content: space-between;
+      align-items:flex-start;
+      gap: 10px;
+      margin-top: 6mm;
+      font-size: 11px;
+      color:var(--muted);
+    }
+
+    /* ===== Print ===== */
+    @page{ size: A4; margin: 10mm; }
+    @media print{
+      body{ background:#fff; }
+      .page{
+        margin:0;
+        box-shadow:none;
+        padding: 8mm 8mm 10mm;
+        min-height: auto;
+      }
+      .no-print{display:none !important;}
+    }
+
+    /* Optional: second page if you want to duplicate the sheet */
+    .page-break{break-after: page;}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>縄文の生活：教科書×VRワールド 照合ワークシート（50分）</h1>
+    <div class="sub">課題：教科書の「縄文の生活」を基準に、VRワールドで <b>再現できている／できていない／判断できない</b> を分類し、根拠を書こう。</div>
+
+    <div class="meta">
+      <div class="field"><div class="label">年組</div><div class="line"></div></div>
+      <div class="field"><div class="label">番号</div><div class="line"></div></div>
+      <div class="field"><div class="label">氏名</div><div class="line"></div></div>
+    </div>
+
+    <div class="meta" style="grid-template-columns: 1fr 1fr 1fr; margin-top:-2mm;">
+      <div class="field"><div class="label">班</div><div class="line"></div></div>
+      <div class="field"><div class="label">役割</div><div class="line"></div></div>
+      <div class="field"><div class="label">教科書ページ</div><div class="line"></div></div>
+    </div>
+
+    <div class="box">
+      <div class="box-title">0. 判定ルール</div>
+      <div class="rules">
+        <div>
+          <span class="pill">◯</span>体験として再現され、教科書記述と整合する
+          <div class="note">例：弓矢でシカ/イノシシを狩る → 狩猟の再現</div>
+        </div>
+        <div>
+          <span class="pill">×</span>教科書にあるが、対応する体験・観察がない
+          <div class="note">例：祭祀の具体物（土偶・石棒等）が見当たらない</div>
+        </div>
+        <div>
+          <span class="pill">△</span>対応しそうだが、判断に必要な情報（工程・痕跡・比較）が不足
+          <div class="note">例：貝塚の層序・内容物の詳細が見えない／工程が省略されている</div>
+        </div>
+        <div>
+          <b>根拠</b>は「見た・できた」に結びつける（感想だけは禁止）
+          <div class="note">反証・限界（別解釈/不足情報）も書くと高評価</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-title">1. 教科書から「評価軸」を抽出（個人）</div>
+      <div class="prompt">各カテゴリにつき、教科書の重要語句・内容を <b>1〜3個</b> 書く。</div>
+      <div class="grid2">
+        <div>
+          <div class="box-title" style="font-size:12px; margin-top:0;">① 生業（狩猟・採集・漁労）</div>
+          <div class="write-lines short"></div>
+        </div>
+        <div>
+          <div class="box-title" style="font-size:12px; margin-top:0;">② 食生活（加工・保存・調理）</div>
+          <div class="write-lines short"></div>
+        </div>
+        <div>
+          <div class="box-title" style="font-size:12px;">③ 住居・集落（定住／遺構）</div>
+          <div class="write-lines short"></div>
+        </div>
+        <div>
+          <div class="box-title" style="font-size:12px;">④ 道具・技術（遺物：土器／石器／骨角器など）</div>
+          <div class="write-lines short"></div>
+        </div>
+        <div style="grid-column: 1 / span 2;">
+          <div class="box-title" style="font-size:12px;">⑤ 信仰・社会（祭祀／交易／共同体）</div>
+          <div class="write-lines short"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-title">2. VRワールドでの「証拠メモ」（体験しながら）</div>
+      <div class="prompt">できたこと・見えたことを具体的に（キーワード＋短文でOK）。</div>
+
+      <div class="grid2">
+        <div>
+          <div class="box-title" style="font-size:12px; margin-top:0;">体験① 狩猟（シカ／イノシシ）</div>
+          <div class="note">何をした（操作・結果）／教科書と関係しそうな点</div>
+          <div class="write-lines"></div>
+        </div>
+        <div>
+          <div class="box-title" style="font-size:12px; margin-top:0;">体験② 加工（シカ→骨→骨角器→釣具）</div>
+          <div class="note">何をした／そこから言えそうなこと（推論）</div>
+          <div class="write-lines"></div>
+        </div>
+        <div>
+          <div class="box-title" style="font-size:12px;">体験③ どんぐり→クッキー（食加工）</div>
+          <div class="note">加工・保存・調理の視点で</div>
+          <div class="write-lines"></div>
+        </div>
+        <div>
+          <div class="box-title" style="font-size:12px;">体験④ 貝塚の中を見る（遺構）</div>
+          <div class="note">見えた特徴／遺構として言えること</div>
+          <div class="write-lines"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-title">3. 教科書×VR 照合表（班で相談）</div>
+      <div class="prompt">判定（◯×△）を必ず付け、根拠は「見た・できた」に結びつける。</div>
+      <table aria-label="照合表">
+        <thead>
+          <tr>
+            <th class="w-18">教科書の要素（短く）</th>
+            <th class="w-24">VRでの対応（何ができた/見えた？）</th>
+            <th class="w-10">判定（◯×△）</th>
+            <th class="w-24">根拠（観察・体験の具体）</th>
+            <th class="w-24">反証・限界（別解/不足情報）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>例：狩猟（シカ）</td>
+            <td>弓矢でシカを狩った</td>
+            <td>◯</td>
+            <td>シカを獲得→食料/素材（骨・皮）の利用を説明できる</td>
+            <td>集団猟・解体工程・季節性はワールドだけでは不明</td>
+          </tr>
+          <tr>
+            <td>①</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>②</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>③</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>④</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>⑤</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>⑥</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box">
+      <div class="box-title">4. 「×」または「△」の深掘り（個人）</div>
+      <div class="prompt">照合表から <b>×か△を1つ</b> 選び、理由と改善案を書く。</div>
+
+      <div class="meta" style="grid-template-columns: 1.4fr .8fr; gap:8mm; margin: 0 0 3mm;">
+        <div class="field"><div class="label">選んだ項目</div><div class="line"></div></div>
+        <div class="field"><div class="label">判定</div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <span class="cb"><span class="square"></span>×</span>
+            <span class="cb"><span class="square"></span>△</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-title" style="font-size:12px;">(1) なぜ再現できていない／判断できない？（不足情報は何？）</div>
+      <div class="write-lines"></div>
+
+      <div class="box-title" style="font-size:12px; margin-top:10px;">(2) 再現に近づけるには？（VR側の追加 or 追加で調べたい資料）</div>
+      <div class="write-lines"></div>
+    </div>
+
+    <div class="box">
+      <div class="box-title">5. まとめ（80〜120字）</div>
+      <div class="prompt">次の語句から <b>2つ以上</b> 使用：貝塚／狩猟／採集／漁労／骨角器／加工／定住（ほか教科書の語句でも可）</div>
+      <div class="write-lines tall"></div>
+      <div class="note">字数：＿＿＿字</div>
+    </div>
+
+    <div class="footer">
+      <div>
+        <b>評価の観点（簡易）</b><br>
+        ①判定の妥当性　②根拠の具体性　③反証・限界　④改善案の現実性
+      </div>
+      <div class="no-print" style="text-align:right;">
+        <b>印刷ヒント</b><br>
+        ブラウザの印刷設定：用紙A4／余白「既定」or「最小」／背景のグラフィックON（線が見やすくなります）
+      </div>
+    </div>
+  </div>
+</body>
+</html>
